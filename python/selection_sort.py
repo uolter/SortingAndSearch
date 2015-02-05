@@ -5,7 +5,7 @@
 import unittest
 
 
-def sel_sort(unsorted):
+def selection_sort(unsorted):
     """
         select sort.
         the algorithm is in-place. This means that it uses essentially no extra storage.
@@ -34,22 +34,22 @@ class TestSelSort(unittest.TestCase):
    
     def test_sort_empty(self):
 
-        self.assertEqual([], sel_sort([]))
+        self.assertEqual([], selection_sort([]))
 
 
     def test_sort_one(self):
 
-        self.assertEqual([1], sel_sort([1]))
+        self.assertEqual([1], selection_sort([1]))
 
 
     def test_sort_numbers(self):
 
-        self.assertEqual([1,2,3,4], sel_sort([4,3,2,1,]))
+        self.assertEqual([1,2,3,4], selection_sort([4,3,2,1,]))
 
 
     def test_sort_string(self):
 
-        self.assertEqual(['e', 's', 't', 't'], sel_sort(list("test")))
+        self.assertEqual(['e', 's', 't', 't'], selection_sort(list("test")))
 
 if __name__ == '__main__':
 
